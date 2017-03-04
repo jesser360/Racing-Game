@@ -1,10 +1,15 @@
 #lane1{
-  background-color: blue;
+  background-color: #3463af;
   height:275px;
   opacity: .9;
+
+}
+#board{
+  border:3px solid black;
+  box-shadow: 10px 10px 5px #222222;
 }
 #lane2{
-  background-color: red;
+  background-color: #b21a22;
   height:275px;
   opacity: .9;
 }
@@ -34,14 +39,45 @@ background-size: contain;
 }
 #countDown{
   font-size:45px;
-  color:red;
+  color:#c5c5c5;
+  font-weight: 400;
 }
 body{
-  background-image: url('pics/america.gif');
+  background-image: url('pics/flag.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+}
+.obamaMsg{
+  font-size: 60px;
+  opacity:1;
+  font-weight: bold;
+}
+.trumpMsg{
+  font-size: 60px;
+  opacity:1;
+  font-weight: bold;
+}
+.scoreObama{
+  font-size:25px;
+  font-style:italic;
+  opacity:1;
+}
+.scoreTrump{
+  font-size:25px;
+  font-style: italic;
+  opacity:1;
 }
 .wall{
   height:100px;
   width:100px;
+}
+.btn{
+  font-size:25px;
+}
+#title{
+  font-family:cursive;
+  font-size: 80px;
+  font-weight:600;
+  color:#222;
+  text-shadow: 3px 3px 2px #c5c5c5;
 }
