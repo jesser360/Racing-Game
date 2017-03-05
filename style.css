@@ -74,6 +74,10 @@ body{
 .btn{
   font-size:25px;
 }
+.arrows{
+  font-size:15px;
+  font-weight: bold;
+}
 #title{
   font-family:cursive;
   font-size: 80px;
