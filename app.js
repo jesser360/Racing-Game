@@ -14,6 +14,13 @@ $(document).ready(function() {
     var $lane2 = $('#lane2');
     $('.obamaMsg').hide();
     $('.trumpMsg').hide();
+    $('#p1').css('position', 'absolute');
+    $('#p1').css('top', 0);
+    $('#p1').css('left', 15);
+    $('#p2').css('position', 'absolute');
+    $('#p2').css('top', 0);
+    $('#p2').css('left', 15);
+
 
 
     function Racer(isWinner) {
@@ -66,20 +73,20 @@ function moveObama(go) {
             down = 40;
             if (el.keyCode == left) {
                 $('#p1').animate({
-                    left: "-=150px"
+                    left: "-=250px"
                 })
             } else if (el.keyCode == up) {
                 $('#p1').animate({
-                    top: "-=150px"
+                    top: "-=250px"
                 })
             } else if (el.keyCode == right) {
                 $('#p1').animate({
-                    left: "+=150px"
+                    left: "+=250px"
                 })
                 winnerObama();
             } else if (el.keyCode == down) {
                 $('#p1').animate({
-                    top: "+=150px"
+                    top: "+=250px"
                 })
             }
             $(document).bind('keyup', function() {
@@ -99,20 +106,20 @@ function moveTrump(go) {
             s = 83;
             if (el.keyCode == a) {
                 $('#p2').animate({
-                    left: "-=150px"
+                    left: "-=250px"
                 })
             } else if (el.keyCode == w) {
                 $('#p2').animate({
-                    top: "-=150px"
+                    top: "-=250px"
                 })
             } else if (el.keyCode == d) {
                 $('#p2').animate({
-                    left: "+=150px"
+                    left: "+=250px"
                 })
                 winnerTrump();
             } else if (el.keyCode == s) {
                 $('#p2').animate({
-                    top: "+=150px"
+                    top: "+=250px"
                 })
             }
             $(document).bind('keyup', function() {
@@ -124,7 +131,8 @@ function moveTrump(go) {
 
 function winnerObama() {
     var x = $('#p1').offset().left;
-    if (x > 1080) {
+    var q = $('#p1').offset().top;
+    if (x > 1060) {
         $('.obamaMsg').show();
         $('.scoreObama').show()
         $('#p1').stop().hide();
@@ -147,10 +155,18 @@ function winnerObama() {
           }
       }
    }
+   if(x >= 470 && x <= 670 && q <= 220){
+     $('#p1').stop();
+     console.log("obama Stopped");
+   } else if (q >= 245){
+     $('#p1').stop();
+     console.log('obama stopped');
+   }
 }
 
 function winnerTrump() {
     var y = $('#p2').offset().left;
+    var r = $('#p2').offset().top;
     if (y > 1060) {
         $('.trumpMsg').show();
         $('.scoreTrump').show()
@@ -174,7 +190,20 @@ function winnerTrump() {
           }
      }
    }
+   if(y >= 430 && y <= 655 && r <= 500){
+     $('#p2').stop();
+     console.log("trump Stopped");
+   } else if (r >= 520){
+     $('#p2').stop();
+     console.log('trump stopped');
+    }
 }
+// function blockObama(){
+//   var l = $('#p1').offset().left;
+//   var t = $('#p1').offset().top;
+//     }
+// }
+// blockObama();
 // function displayWinner(){
 //   if(racer1.isWinner === true){
 //   } else if(racer2.isWinner === true){
