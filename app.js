@@ -21,8 +21,6 @@ $(document).ready(function() {
     $('#p2').css('top', 0);
     $('#p2').css('left', 15);
 
-
-
     function Racer(isWinner) {
         this.isWinner = isWinner || false;
     }
@@ -32,8 +30,10 @@ $(document).ready(function() {
     $('#start').on('click', function() {
         if(winner === false){
           timer();
-          counter = 4;
+        //  count = 4;
       } else if (winner === true){
+        count = 4;
+        go = false;
         $('.scoreObama').hide();
         $('.scoreTrump').hide();
         $('.obamaMsg').hide();
@@ -44,29 +44,32 @@ $(document).ready(function() {
         $('#p2').css('position', 'absolute');
         $('#p2').css('top', 0);
         $('#p2').css('left', 15);
-        $('#p1').show();
-        $('#p2').show();
         $('.icon').show();
         $('.arrows').show();
         $('#obamaWarning').text("Warning, beware of traps");
         $('#trumpWarning').text("Warning, beware of traps");
-
-
+        timer();
+        moveObama();
+        moveTrump();
       }
     })
 });
 
 function timer() {
     if (count > 0) {
+        $('#countDown').empty();
         $('#countDown').append(count + "..");
         count--;
         setTimeout(timer, 1000);
+
     }
     if (count === 0) {
         $('#countDown').text("GO!");
         go = true;
         moveObama(go);
         moveTrump(go);
+        $('#p1').show();
+        $('#p2').show();
     }
 }
 
@@ -102,7 +105,6 @@ function moveObama(go) {
         });
     };
 }
-
 
 function moveTrump(go) {
     if (go === true) {
@@ -147,6 +149,8 @@ function winnerObama() {
         $('.arrows').hide();
         $('.icon').hide();
         winner = true;
+        go = false;
+        count =4;
         obamaCount++;
         if(obamaCount > trumpCount){
           if((obamaCount-trumpCount) === 1){
@@ -164,7 +168,7 @@ function winnerObama() {
           }
       }
    }
-   if(x >= 470 && x <= 670 && q <= 215){
+   if(x >= 470 && x <= 650 && q <= 215){
      $('#p1').stop();
      $('#obamaWarning').text("Go Around the Traps");
    } else if (q >= 245 || q<= 95){
@@ -187,6 +191,8 @@ function winnerTrump() {
         $('.arrows').hide()
         $('.icon').hide();
         winner = true;
+        go = false;
+        count = 4;
         trumpCount++;
         if(trumpCount > obamaCount){
           if((trumpCount-obamaCount) === 1){
@@ -204,13 +210,13 @@ function winnerTrump() {
           }
      }
    }
-   if(y >= 430 && y <= 655 && r <= 495){
+   if(y >= 430 && y <= 630 && r <= 495){
      $('#p2').stop();
      $('#trumpWarning').text("Go Around the Traps");
-   } else if (r >= 525 || r<= 370){
+   } else if (r >= 525 || r<= 380){
      $('#p2').stop();
      $('#trumpWarning').text("Stay in your Lane Trump!");
-   } else if(y >= 940 && y <= 1040 && r >= 400){
+   } else if(y >= 940 && y <= 1040 && r >= 410){
      $('#p2').stop();
      $('#trumpWarning').text("Go Around the Traps");
    }

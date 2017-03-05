@@ -78,6 +78,12 @@ body{
   font-size:15px;
   font-weight: bold;
 }
+#trumpWarning{
+  font-size:20px;
+}
+#obamaWarning{
+  font-size:20px;
+}
 #title{
   font-family:cursive;
   font-size: 80px;
