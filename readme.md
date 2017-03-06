@@ -1,4 +1,9 @@
-# <img src="https://cloud.githubusercontent.com/assets/7833470/10423298/ea833a68-7079-11e5-84f8-0a925ab96893.png" width="60"> Project 0 - Racing Game
+I created a 2 player racing game where the object is to move from one side of the screen to the other faster than your opponent. You can move in all directions but you must stay in your lane and avoid the obstacles that are in the way. The game keeps score between the two players so play hard!
+The gameboard consists of two lanes, two players represented by presidential icons, obstacles to avoid, a countdown timer before each race, and a score tracker. There are also directions on how to move your player below each image. Enjoy the presidential Race
+
+
+
+<!-- # <img src="https://cloud.githubusercontent.com/assets/7833470/10423298/ea833a68-7079-11e5-84f8-0a925ab96893.png" width="60"> Project 0 - Racing Game
 
 **Read this entire document before writing a line of code.**
 
@@ -151,4 +156,4 @@ These feature ideas are for "extra credit"! **Don't focus on them until you've h
 
 ###### How will I get feedback from instructors?
 
-See the [feedback doc](feedback.md) for details.
+See the [feedback doc](feedback.md) for details. -->
