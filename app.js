@@ -5,6 +5,7 @@ var winner = false;
 var trumpCount = 1;
 var obamaCount = 1;
 $(document).ready(function() {
+  //good variable names
     winner = false;
     var go = false;
     var $board = $('#board')
@@ -21,16 +22,18 @@ $(document).ready(function() {
     $('#p2').css('top', 0);
     $('#p2').css('left', 15);
 
+    //excellent organization
     function Racer(isWinner) {
         this.isWinner = isWinner || false;
     }
     var racer1 = new Racer(false);
     var racer2 = new Racer(false);
 
+    //this is excellent mastery of jquery and anonymous functions! Great job!
     $('#start').on('click', function() {
         if(winner === false){
           timer();
-        //  count = 4;
+          //remove unused code
       } else if (winner === true){
         count = 4;
         go = false;
@@ -76,10 +79,11 @@ function timer() {
 function moveObama(go) {
     if (go === true) {
         $(document).bind('keydown', function(el) {
-          a = 65;
-          w = 87;
-          d = 68;
-          s = 83;
+          //make them vars
+          var a = 65;
+          var w = 87;
+          var d = 68;
+          var s = 83;
 
             if (el.keyCode == a) {
                 $('#p1').animate({
@@ -99,6 +103,7 @@ function moveObama(go) {
                     top: "+=250px"
                 })
             }
+            //ooh, nice use of bind!
             $(document).bind('keyup', function() {
                 $('#p1').stop();
             })
@@ -109,10 +114,11 @@ function moveObama(go) {
 function moveTrump(go) {
     if (go === true) {
         $(document).bind('keydown', function(el) {
-          j = 74;
-          i = 73;
-          l = 76;
-          k = 75;
+          //again, make sure you use vars
+          var j = 74;
+          var i = 73;
+          var l = 76;
+          var k = 75;
             if (el.keyCode == j) {
                 $('#p2').animate({
                     left: "-=250px"
@@ -138,6 +144,8 @@ function moveTrump(go) {
     };
 }
 
+//this is good and works well -- I think you could probably make a winner() master function
+//that takes inputs and reduces the amount of code here
 function winnerObama() {
     var x = $('#p1').offset().left;
     var q = $('#p1').offset().top;
@@ -221,25 +229,4 @@ function winnerTrump() {
      $('#trumpWarning').text("Go Around the Traps");
    }
 }
-// function blockObama(){
-//   var l = $('#p1').offset().left;
-//   var t = $('#p1').offset().top;
-//     }
-// }
-// blockObama();
-// function displayWinner(){
-//   if(racer1.isWinner === true){
-//   } else if(racer2.isWinner === true){
-//   }
-// }
-
-//$p1.addClass('obama');
-//$p2.addClass('trump');
-// var obamaFace = new Image();
-// obamaFace.src = 'pics/obamaface.png';
-//
-// var trumpFace = new Image();
-// trumpFace.src = 'pics/trumpface.jpg';
-//
-// $('lanes1').append($p1);
-// $('lane2').append($p2);
+//remove unused code
