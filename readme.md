@@ -1,5 +1,8 @@
 I created a 2 player racing game where the object is to move from one side of the screen to the other faster than your opponent. You can move in all directions but you must stay in your lane and avoid the obstacles that are in the way. The game keeps score between the two players so play hard!
-The gameboard consists of two lanes, two players represented by presidential icons, obstacles to avoid, a countdown timer before each race, and a score tracker. There are also directions on how to move your player below each image. Enjoy the presidential Race
+The game board consists of two lanes, two players represented by presidential icons, obstacles to avoid, a countdown timer before each race, and a score tracker. There are also directions on how to move your player below each image. Enjoy the presidential Race
+
+Post Project Self Advice-
+I would challenge myself to try and find a way to create a win-game method that was sizable to different screens, not just to my particular size(Responsive Design). Also work more on the styling of the counter, make it bigger and flashier to attract more attention before the race. If possible could have used Date() and Time() to show the user their race times and to give the option to compete against yourself. 
 
 
 
