@@ -1,0 +1,27 @@
+{
+  "name": "racing-game",
+  "version": "1.0.0",
+  "description": "I created a 2 player racing game where the object is to move from one side of the screen to the other faster than your opponent. You can move in all directions but you must stay in your lane and avoid the obstacles that are in the way. The game keeps score between the two players so play hard! The game board consists of two lanes, two players represented by presidential icons, obstacles to avoid, a countdown timer before each race, and a score tracker. There are also directions on how to move your player below each image. Enjoy the presidential Race",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesser360/Racing-Game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesser360/Racing-Game/issues"
+  },
+  "homepage": "https://github.com/jesser360/Racing-Game#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "engines": {
+"node": "7.5.0",
+"npm": "4.1.2"
+}
+}
